@@ -1,0 +1,28 @@
+// Global
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "GoT", sans-serif;
+  text-transform: uppercase; // la fuente de game of thrones solo tiene mayusculas !
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
