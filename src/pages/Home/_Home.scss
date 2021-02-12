@@ -10,6 +10,7 @@
   h1 {
     font-family: "GoT", sans-serif;
     font-size: 3rem;
+    cursor: default;
     @include landscape {
       font-size: 5rem;
     }

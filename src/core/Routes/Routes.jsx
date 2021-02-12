@@ -16,31 +16,43 @@ export function Routes(props) {
 
       <Route path="/characters/:characterName">
         <CharacterDetail
+          t={props.t}
+          fnSetLang={props.fnSetLang}
         ></CharacterDetail>
       </Route>
 
       <Route path="/characters">
         <Characters
+          t={props.t}
+          fnSetLang={props.fnSetLang}
         ></Characters>
       </Route>
 
       <Route path="/houses/:houseName">
         <HouseDetail
+          t={props.t}
+          fnSetLang={props.fnSetLang}
         ></HouseDetail>
       </Route>
 
       <Route path="/houses">
         <Houses
+          t={props.t}
+          fnSetLang={props.fnSetLang}
         ></Houses>
       </Route>
 
       <Route path="/chronology">
         <Chronology
+          t={props.t}
+          fnSetLang={props.fnSetLang}
         ></Chronology>
       </Route>
 
       <Route path="/" exact>
         <Home
+          t={props.t}
+          fnSetLang={props.fnSetLang}
         ></Home>
       </Route>
 

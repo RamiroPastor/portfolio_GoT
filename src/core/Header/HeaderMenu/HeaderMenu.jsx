@@ -11,11 +11,15 @@ export function HeaderMenu(props) {
       <NavLink to="/" className="HeaderMenu__button">
         <img alt="go home" src="/assets/images/home.svg"/>
       </NavLink>}
-      <button className="HeaderMenu__langButton">
-        <img alt="spanish" src="/assets/flags/spain.svg"/>
+      <button 
+        className="HeaderMenu__langButton"
+        onClick={() => props.fnSetLang("es")}
+        ><img alt="spanish" src="/assets/flags/spain.svg"/>
       </button>
-      <button className="HeaderMenu__langButton">
-        <img alt="english" src="/assets/flags/united-kingdom.svg"/>
+      <button 
+        className="HeaderMenu__langButton"
+        onClick={() => props.fnSetLang("en")}
+        ><img alt="english" src="/assets/flags/united-kingdom.svg"/>
       </button>
     </div>
   )

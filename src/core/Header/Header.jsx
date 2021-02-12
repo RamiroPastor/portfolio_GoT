@@ -27,16 +27,21 @@ export function Header(props) {
         {props.showGoBackButton &&
         <NavLink className="Header__goBack" to={goBackRoute}>
           <img alt="go back" src="/assets/images/arrow-left.svg"/>
-          <span>Volver</span>
+          <span>{props.t("goBack")}</span>
         </NavLink>}
 
         {props.showSearchBar &&
-        <SearchBar></SearchBar>}
+        <SearchBar
+          t={props.t}
+        ></SearchBar>}
 
         {!props.showGoBackButton && !props.showSearchBar &&
         <div> </div>}  {/* esto es un pequeño hack para que funcione el justify-content: space-between*/}
 
-        <HeaderMenu showGoHomeButton={props.showGoHomeButton}></HeaderMenu>
+        <HeaderMenu 
+          showGoHomeButton={props.showGoHomeButton}
+          fnSetLang={props.fnSetLang}
+        ></HeaderMenu>
 
       </div>
     </div>

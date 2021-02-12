@@ -14,7 +14,7 @@ export function SearchBar(props) {
       <input 
         className="SeachBar__input"
         type="seach"
-        placeholder="Buscar..."
+        placeholder={props.t("search") + "..."}
       />
     </label>
   )

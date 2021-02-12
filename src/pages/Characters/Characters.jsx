@@ -12,9 +12,13 @@ export function Characters(props) {
         showGoBackButton={false}
         showSearchBar={true}
         showGoHomeButton={true}
+        t={props.t}
+        fnSetLang={props.fnSetLang}
       ></Header>
       <h1>Characters works</h1>
-      <Footer></Footer>
+      <Footer
+        t={props.t}
+      ></Footer>
     </div>
   )
 }

@@ -12,9 +12,13 @@ export function Chronology(props) {
         showGoBackButton={false}
         showSearchBar={false}
         showGoHomeButton={true}
+        t={props.t}
+        fnSetLang={props.fnSetLang}
       ></Header>
       <h1>Chronology works</h1>
-      <Footer></Footer>
+      <Footer
+        t={props.t}
+      ></Footer>
     </div>
   )
 }
