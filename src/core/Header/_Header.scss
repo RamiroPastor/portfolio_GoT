@@ -1,0 +1,35 @@
+.Header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.Header__inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column-reverse;
+  height: $headerH;
+  width: 100%;
+  max-width: $maxW;
+  padding: 0 $padH;
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.Header__goBack {
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 1.6rem;
+    height: 4vh;
+  }
+  span {
+    font-size: 3vh;
+  }
+}

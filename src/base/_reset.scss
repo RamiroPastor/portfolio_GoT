@@ -8,11 +8,5 @@
 }
 
 html {
-  font-size: 52.5%;
-  @include tablet {
-    font-size: 57.5%;
-  }
-  @include desktop {
-    font-size: 62.5%;
-  }
+  font-size: 62.5%;
 }

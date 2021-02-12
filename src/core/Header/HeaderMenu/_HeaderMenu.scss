@@ -1,0 +1,30 @@
+.HeaderMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeaderMenu__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    $x: 5vh;
+    width: $x;
+    height: $x;
+  }
+}
+
+.HeaderMenu__langButton {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
+  border-style: none;
+  img {
+    $x: 6.4vh;
+    // width: $x;
+    height: $x;
+  }
+}

@@ -4,6 +4,12 @@
 @import "./base/reset";
 @import "./base/global";
 
+@import "./core/Footer/Footer";
+@import "./core/Header/Header";
+@import "./core/Header/HeaderMenu/HeaderMenu";
+@import "./core/Header/SearchBar/SearchBar";
+@import "./core/Routes/Routes";
+
 @import "./pages/CharacterDetail/CharacterDetail";
 @import "./pages/Characters/Characters";
 @import "./pages/Chronology/Chronology";
