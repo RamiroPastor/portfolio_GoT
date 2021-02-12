@@ -1,0 +1,23 @@
+.Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../assets/images/the-iron-throne.svg);
+  background-size: cover;
+  background-position: center;
+  h1 {
+    font-family: "GoT", sans-serif;
+    font-size: 3rem;
+    @include landscape {
+      font-size: 5rem;
+    }
+    @include tablet {
+      font-size: 7.6rem;
+    }
+    @include desktop {
+      font-size: 10rem;
+    }
+  }
+}
