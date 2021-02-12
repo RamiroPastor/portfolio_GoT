@@ -12,9 +12,13 @@ export function Houses(props) {
         showGoBackButton={false}
         showSearchBar={true}
         showGoHomeButton={true}
+        t={props.t}
+        fnSetLang={props.fnSetLang}
       ></Header>
       <h1>Houses works</h1>
-      <Footer></Footer>
+      <Footer
+        t={props.t}
+      ></Footer>
     </div>
   )
 }

@@ -9,13 +9,19 @@ export function Footer(props) {
     <div className="Footer">
       <nav className="Footer__inner">
         <NavLink activeClassName="Footer__link--active" to="/characters">
-          <p className="Footer__linkText">Personajes</p>
+          <p className="Footer__linkText">
+            {props.t("characters")}
+          </p>
         </NavLink>
         <NavLink activeClassName="Footer__link--active" to="/houses">
-          <p className="Footer__linkText">Casas</p>
+          <p className="Footer__linkText">
+            {props.t("houses")}
+          </p>
         </NavLink>
         <NavLink activeClassName="Footer__link--active" to="/chronology">
-          <p className="Footer__linkText">Cronologia</p>
+          <p className="Footer__linkText">
+            {props.t("chronology")}
+          </p>
         </NavLink>
       </nav>
     </div>

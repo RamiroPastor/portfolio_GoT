@@ -11,6 +11,8 @@ export function HouseDetail(props) {
         showGoBackButton={true}
         showSearchBar={false}
         showGoHomeButton={true}
+        t={props.t}
+        fnSetLang={props.fnSetLang}
       ></Header>
       <h1>HouseDetails works</h1>
     </div>

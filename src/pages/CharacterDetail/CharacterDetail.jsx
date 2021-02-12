@@ -11,6 +11,8 @@ export function CharacterDetail(props) {
         showGoBackButton={true}
         showSearchBar={false}
         showGoHomeButton={true}
+        t={props.t}
+        fnSetLang={props.fnSetLang}
       ></Header>
       <h1>CharacterDetail works</h1>
     </div>

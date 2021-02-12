@@ -21,4 +21,7 @@
   color: white;
   font-family: "Lato", sans-serif;
   font-size: 2.4vh;
+  &::placeholder {
+    text-transform: capitalize;
+  }
 }
