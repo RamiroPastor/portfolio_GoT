@@ -5,15 +5,15 @@ import minusIcon   from "../../assets/images/minus.svg";
 import plusIcon    from "../../assets/images/plus.svg";
 import musicIcon   from "../../assets/images/music.svg";
 import pauseIcon   from "../../assets/images/pause.svg";
-import themeGoT    from "../../assets/sounds/GoT.mp3";
+
 
 
 export function MusicGoT(props) {
 
-  const [audioState, setAudioState] = useState({vol: 0.5, paused: false})
+  const [audioState, setAudioState] = useState({vol: 0.5, paused: true})
   
   function changeVolume(option) {
-    const audio$$ = document.querySelector("#musicGoT-audio");
+    const audio$$ = document.querySelector("#MusicGoT-audio");
     let newVol = audio$$.volume;
     if (option === "+") {
       newVol = (audioState.vol + 0.1 > 1) ? 1 : audioState.vol + 0.1; 
@@ -28,7 +28,7 @@ export function MusicGoT(props) {
 
   function togglePlay() {
     const paused = !audioState.paused;
-    const audio$$ = document.querySelector("#musicGoT-audio");
+    const audio$$ = document.querySelector("#MusicGoT-audio");
     setAudioState({...audioState, paused});
     (paused) ? audio$$.pause() : audio$$.play();
   }
@@ -48,8 +48,8 @@ export function MusicGoT(props) {
   return(
     <div className="MusicGoT">
 
-      <audio autoPlay loop id="musicGoT-audio">
-        <source type="audio/mpeg" src={themeGoT}/>
+      <audio loop paused="true" id="MusicGoT-audio" className="MusicGoT__audio">
+        <source type="audio/mpeg" src="/assets/sounds/GoT.mp3"/>
       </audio>
 
       <div className="MusicGoT__controls" onMouseEnter={showVolumeButtons} onMouseLeave={hideVolumeButtons}>
@@ -62,8 +62,8 @@ export function MusicGoT(props) {
         <button 
           id="MusicGoT-mid" 
           className="MusicGoT__button" onClick={togglePlay}>
-            {audioState.paused  && <img src={pauseIcon} alt=""/>}
-            {!audioState.paused && <img src={musicIcon} alt=""/>}
+            {audioState.paused  && <img src={musicIcon} alt=""/>}
+            {!audioState.paused && <img src={pauseIcon} alt=""/>}
         </button>
         <button 
           id="MusicGoT-volDown"
