@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import './App.css';
 import { setCookieForever } from "./base/cookies";
+import { MusicGoT } from "./core/MusicGoT/MusicGoT";
 import { Routes } from "./core/Routes/Routes";
 
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <MusicGoT/>
         <Routes fnSetLang={changeLanguage} t={t}></Routes>
       </div>
     </Router>
