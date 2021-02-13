@@ -2,6 +2,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import es from "../../../assets/flags/spain.svg";
+import en from "../../../assets/flags/united-kingdom.svg";
 
 export function HeaderMenu(props) {
   
@@ -14,12 +16,12 @@ export function HeaderMenu(props) {
       <button 
         className="HeaderMenu__langButton"
         onClick={() => props.fnSetLang("es")}
-        ><img alt="spanish" src="/assets/flags/spain.svg"/>
+        ><img alt="spanish" src={es}/>
       </button>
       <button 
         className="HeaderMenu__langButton"
         onClick={() => props.fnSetLang("en")}
-        ><img alt="english" src="/assets/flags/united-kingdom.svg"/>
+        ><img alt="english" src={en}/>
       </button>
     </div>
   )
