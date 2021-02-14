@@ -11,4 +11,9 @@ export const es =
         , "father": "padre"
         , "siblings": "hermanos"
         , "titles": "titulos"
+        , "words": "lema"
+        , "seat": "sede"
+        , "region": "region"
+        , "religion": "religion"
+        , "created": "fundacion"
     }

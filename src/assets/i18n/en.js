@@ -11,4 +11,9 @@ export const en =
         , "father": "father"
         , "siblings": "siblings"
         , "titles": "titles"
+        , "words": "words"
+        , "seat": "seat"
+        , "region": "region"
+        , "religion": "religion"
+        , "created": "created"
     }
