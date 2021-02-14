@@ -2,7 +2,7 @@
 
 $break1: 510px;
 $break2: 700px;
-$break3: 900px;
+$break3: 1080px;
 
 @mixin landscape {
   @media only screen and (min-width: $break1) {
