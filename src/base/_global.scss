@@ -22,5 +22,6 @@ a {
 .hero {
   height: 100vh - $headerH - $footerH;
   margin-top: $headerH;
+  //TODO Cambiar a black antes del release final
   background-color: navy;
 }
