@@ -1,0 +1,52 @@
+.c-char-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  text-align: center;
+
+  p {
+    padding: 1rem 0;
+  }
+
+  h1, h2 {
+    font-family: "GoT", sans-serif;
+    padding-bottom: 2rem;
+  }
+
+  &__image {
+    padding-bottom: 2rem;
+    object-fit: cover;
+    object-position: top;
+    height: 200px;
+  }
+
+  &__top-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__bottom-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__info {
+    padding-top: 10rem;
+  }
+
+  [data-simplebar="init"] {
+    height: 200px;
+  }
+
+  .simplebar-scrollbar::before {
+    background-color: white;
+  }
+
+  .simplebar-vertical {
+    background-color: gray;
+    border-radius: 20px;
+  }
+}
