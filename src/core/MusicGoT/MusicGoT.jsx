@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-
+import './_MusicGoT.scss';
 import minusIcon   from "../../assets/images/minus.svg";
 import plusIcon    from "../../assets/images/plus.svg";
 import musicIcon   from "../../assets/images/music.svg";

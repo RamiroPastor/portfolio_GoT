@@ -1,7 +1,7 @@
 
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-
+import './_Header.scss';
 import { HeaderMenu } from "./HeaderMenu/HeaderMenu";
 import { SearchBar }  from "./SearchBar/SearchBar";
 
