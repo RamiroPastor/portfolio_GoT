@@ -12,11 +12,11 @@ export function Characters(props) {
   const [character, setCharacter] = useState([]);
     
     const getCharacter = () => {
-        API.get('show/characters/' + characterName).then((res) => {
-            setCharacter(res.datacharacter);
+        API.get('show/characters/').then((res) => {
+            setCharacter(res.data);
         });
       }
-        useEffect(getCharacter, [characterName]);
+        useEffect(getCharacter, []);
 
    return(
     <div className="hero">
@@ -27,16 +27,15 @@ export function Characters(props) {
         t={props.t}
         fnSetLang={props.fnSetLang}
       />
-
-    {character.id && <div className={"c-character"}>
-      {props.character.map((character))}
-     <div className={"c-character__top-info"}>
-        <img className={"c-character__image"} src={character.image} alt={character.name}/>
-        <h2>{character.name}</h2>
+      {character.map((char, i) =>{
+        <div className={"c-character__top-info"}>
+        <img className={"c-character__image"} src={char.image} alt={char.name}/>
+        <h2>{char.name}</h2>
         </div>
-    </div>}
-  
-    
+      } 
+      )}
+
+        
       <Footer
         t={props.t}
       />
