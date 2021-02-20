@@ -1,12 +1,24 @@
-
-import React from "react";
-
+import React, {useState, useEffect} from "react";
+import './_Characters.scss';
 import { Footer } from "../../core/Footer/Footer";
 import { Header } from "../../core/Header/Header";
+import { useParams} from "react-router-dom";
+import {API} from '../../shared/const/api.const';
 
 export function Characters(props) {
-  
-  return(
+
+  const {characterName} = useParams();
+
+  const [character, setCharacter] = useState([]);
+    
+    const getCharacter = () => {
+        API.get('show/characters/' + characterName).then((res) => {
+            setCharacter(res.datacharacter);
+        });
+      }
+        useEffect(getCharacter, [characterName]);
+
+   return(
     <div className="hero">
       <Header
         showGoBackButton={false}
@@ -14,11 +26,21 @@ export function Characters(props) {
         showGoHomeButton={true}
         t={props.t}
         fnSetLang={props.fnSetLang}
-      ></Header>
-      <h1>Characters works</h1>
+      />
+
+    {character.id && <div className={"c-character"}>
+      {props.character.map((character))}
+     <div className={"c-character__top-info"}>
+        <img className={"c-character__image"} src={character.image} alt={character.name}/>
+        <h2>{character.name}</h2>
+        </div>
+    </div>}
+  
+    
       <Footer
         t={props.t}
-      ></Footer>
-    </div>
+      />
+</div>
   )
 }
+  
