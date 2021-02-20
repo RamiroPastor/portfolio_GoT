@@ -24,11 +24,12 @@ export function Characters(props) {
                 fnSetLang={props.fnSetLang}
             />
 
+            <div className="c-character">
             {character.map((char, i) => <div key={i} className={"c-character__top-info"}>
                 <img className={"c-character__image"} src={char.image} alt={char.name}/>
                 <h2>{char.name}</h2>
             </div>)}
-
+            </div>
             <Footer
                 t={props.t}
             />
