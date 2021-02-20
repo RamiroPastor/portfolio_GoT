@@ -6,18 +6,21 @@ $break3: 1080px;
 
 @mixin landscape {
   @media only screen and (min-width: $break1) {
+    transition: all 0.1s linear;
     @content;
   }
 }
 
 @mixin tablet {
   @media only screen and (min-width: $break2) {
+    transition: all 0.1s linear;
     @content;
   }
 }
 
 @mixin desktop {
   @media only screen and (min-width: $break3) {
+    transition: all 0.1s linear;
     @content;
   }
 }
