@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState, useEffect} from "react";
 import './_Characters.scss';
 import {Footer} from "../../core/Footer/Footer";
@@ -7,13 +6,7 @@ import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 import {useParams} from "react-router-dom";
 import {API} from '../../shared/const/api.const';
-=======
 
-import React from "react";
-import './_Characters.scss';
-import { Footer } from "../../core/Footer/Footer";
-import { Header } from "../../core/Header/Header";
->>>>>>> master
 
 export function Characters(props) {
     const {characterName} = useParams();
