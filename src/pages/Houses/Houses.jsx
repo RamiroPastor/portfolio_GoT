@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React, {useState, useEffect} from "react";
-=======
-
-import React from "react";
->>>>>>> master
 import './_Houses.scss';
 import { Footer } from "../../core/Footer/Footer";
 import { Header } from "../../core/Header/Header";
