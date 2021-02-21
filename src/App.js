@@ -24,8 +24,8 @@ function App() {
             <div className="App">
                 <MusicGoT/>
                 <Header fnSetLang={changeLanguage} t={t}/>
-                <Routes fnSetLang={changeLanguage} t={t}/>
-                <Footer fnSetLang={changeLanguage} t={t}/>
+                <Routes t={t}/>
+                <Footer t={t}/>
             </div>
         </Router>
     );
