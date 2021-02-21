@@ -11,9 +11,6 @@ export function Home(props) {
       <h1>#</h1>  
       {/* esto funciona porque el caracter # es el logo de GoT en la fuente de GoT
       viene indicado aqui: https://www.fonts4free.net/game-of-thrones-font.html*/}
-      <Footer
-        t={props.t}
-      ></Footer>
     </div>
   )
 }

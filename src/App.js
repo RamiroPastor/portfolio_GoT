@@ -7,6 +7,7 @@ import {setCookieForever} from "./base/cookies";
 import {MusicGoT} from "./core/MusicGoT/MusicGoT";
 import {Routes} from "./core/Routes/Routes";
 import {Header} from "./core/Header/Header";
+import {Footer} from "./core/Footer/Footer";
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
             <div className="App">
                 <MusicGoT/>
                 <Header fnSetLang={changeLanguage} t={t}/>
-                <Routes fnSetLang={changeLanguage} t={t}></Routes>
+                <Routes fnSetLang={changeLanguage} t={t}/>
+                <Footer fnSetLang={changeLanguage} t={t}/>
             </div>
         </Router>
     );

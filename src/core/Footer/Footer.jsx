@@ -1,13 +1,21 @@
 
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import './_Footer.scss';
 
 
 export function Footer(props) {
+
+  const location = useLocation();
+
+  let showFooter = false;
+
+  if (!location.pathname.startsWith("/characters/") && !location.pathname.startsWith("/houses/")) {
+    showFooter = true;
+  }
   
   return(
-    <div className="Footer">
+    showFooter && <div className="Footer">
       <nav className="Footer__inner">
         <NavLink activeClassName="Footer__link--active" to="/characters">
           <p className="Footer__linkText">
