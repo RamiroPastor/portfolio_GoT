@@ -41,46 +41,7 @@ export function Characters(props) {
             </SimpleBar>
             </section>
 
-    <section className="section">
-        <SimpleBar autoHide={false}>
-          <div className="timeline">
-            {characters && sortedCharacters.map(( character, i ) => 
-            <div className="timeline__item" key={i}>
-              <figure className="figure">
-                <figcaption>
-                  <p className="figure__age">{character.age.age}</p>
-                  <p className="figure__name">{character.age.name}</p>
-                </figcaption>
-                <img className="figure__image" src={character.image} alt={character.age.name} />
-              </figure>
-            </div>)}
-          </div>
-          
-        </SimpleBar>
-      </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
             <Footer
                 t={props.t}
             />
