@@ -31,13 +31,6 @@ export function CharacterDetail(props) {
 
     return (
         <div className="hero">
-            <Header
-                showGoBackButton={true}
-                showSearchBar={false}
-                showGoHomeButton={true}
-                t={props.t}
-                fnSetLang={props.fnSetLang}
-            />
             {character.id && house[0] && <div className={"c-char-detail"}>
                 <div className={"c-char-detail__top-info"}>
                     <img className={"c-char-detail__image"} src={character.image} alt={character.name}/>
