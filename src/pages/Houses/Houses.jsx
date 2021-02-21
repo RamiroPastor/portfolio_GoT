@@ -29,7 +29,7 @@ export function Houses(props) {
       />
       
       {house.map((house, i) => <div key={i} className={"c-character__top-info"}>
-                <img className={"c-character__image"} src={house.image} alt={house.name}/>
+                <img className={"c-character__image"} src={house.logoURL} alt={house.name}/>
                 <h2>{house.name}</h2>
             </div>)}
 

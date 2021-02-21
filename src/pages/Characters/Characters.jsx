@@ -30,6 +30,9 @@ export function Characters(props) {
                 <h2>{char.name}</h2>
             </div>)}
             </div>
+
+
+            
             <Footer
                 t={props.t}
             />
