@@ -12,13 +12,13 @@
 
 .Header__inner {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column-reverse;
   height: $headerH;
   width: 100%;
   max-width: $maxW;
-  padding: 0 $padH;
+  padding: 2.5rem $padH;
   @include desktop {
     flex-direction: row;
     justify-content: space-between;
