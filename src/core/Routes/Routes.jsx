@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-
+import './_Routes.scss';
 import { CharacterDetail } from "../../pages/CharacterDetail/CharacterDetail";
 import { Characters      } from "../../pages/Characters/Characters";
 import { Chronology      } from "../../pages/Chronology/Chronology";

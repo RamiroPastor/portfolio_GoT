@@ -3,7 +3,7 @@ import './_CharacterDetail.scss';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 import {Header} from "../../core/Header/Header";
-import {NavLink, useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {API} from "../../shared/const/api.const";
 
 export function CharacterDetail(props) {
@@ -31,13 +31,6 @@ export function CharacterDetail(props) {
 
     return (
         <div className="hero">
-            <Header
-                showGoBackButton={true}
-                showSearchBar={false}
-                showGoHomeButton={true}
-                t={props.t}
-                fnSetLang={props.fnSetLang}
-            />
             {character.id && house[0] && <div className={"c-char-detail"}>
                 <div className={"c-char-detail__top-info"}>
                     <img className={"c-char-detail__image"} src={character.image} alt={character.name}/>
@@ -46,7 +39,7 @@ export function CharacterDetail(props) {
                 <div className={"c-char-detail__bottom-info"}>
                     <div className={"c-char-detail__info"}>
                         <h2>{props.t("house")}</h2>
-                        <NavLink to={"/houses/"+character.house}><img className={"c-char-detail__house-image"} src={house[0].logoURL} alt={""}/></NavLink>
+                        <Link to={"/houses/"+character.house}><img className={"c-char-detail__house-image"} src={house[0].logoURL} alt={""}/></Link>
                     </div>
 
                     <div className={"c-char-detail__info"}>

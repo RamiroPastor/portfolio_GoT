@@ -1,3 +1,6 @@
+@import '/src/base/variables';
+@import '/src/base/responsive';
+
 .Footer {
   position: fixed;
   bottom: 0;
@@ -30,8 +33,29 @@
 
 .Footer__linkText {
   font-family: "GoT", sans-serif;
+  position: relative;
+  padding: 3px 0;
 }
 
 .Footer__link--active {
-  text-decoration: underline;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-bottom: 2px solid white;
+    animation: linkEffect 0.3s;
+  }
+}
+
+@keyframes linkEffect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%
+  }
 }

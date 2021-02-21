@@ -1,6 +1,7 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
+import './_Footer.scss';
 
 
 export function Footer(props) {

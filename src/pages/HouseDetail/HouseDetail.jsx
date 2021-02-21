@@ -22,13 +22,6 @@ export function HouseDetail(props) {
 
     return (
         <div className="hero">
-            <Header
-                showGoBackButton={true}
-                showSearchBar={false}
-                showGoHomeButton={true}
-                t={props.t}
-                fnSetLang={props.fnSetLang}
-            />
             {house._id && <div className={"c-house-detail"}>
                 <div className={"c-house-detail__top-info"}>
                     <img className={"c-house-detail__image"} src={house.logoURL} alt={house.name}/>

@@ -1,5 +1,6 @@
 
 import React from "react";
+import './_SearchBar.scss';
 
 
 export function SearchBar(props) {

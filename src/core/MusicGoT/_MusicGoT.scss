@@ -1,0 +1,50 @@
+.MusicGoT {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.MusicGoT__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid silver;
+  border-radius: 100px;
+  background-color: transparent;
+}
+
+.MusicGoT__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-style: none;
+  border-radius: 100px;
+  background-color: silver;
+  transition: all 500ms ease-out 0s;
+  img {
+    $x: 1.2rem;
+    width: $x;
+    height: $x;
+    transition: all 500ms ease-out 0s;
+  }
+  &:hover {
+    background-color: gainsboro;
+  }
+  &--mid {
+    margin: 0.5rem 0;
+  }
+  &--hidden {
+    padding: 0 !important;
+    border-width: 0 !important;
+    img {
+      height: 0 !important;
+      width: 0 !important;
+    }
+  }
+}
