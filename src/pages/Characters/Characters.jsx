@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import './_Characters.scss';
 import {Footer} from "../../core/Footer/Footer";
 import {Header} from "../../core/Header/Header";
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
 import {useParams} from "react-router-dom";
 import {API} from '../../shared/const/api.const';
 
@@ -23,14 +25,14 @@ export function Characters(props) {
                 t={props.t}
                 fnSetLang={props.fnSetLang}
             />
-
+            <SimpleBar autoHide={false}>
             <div className="c-character">
             {character.map((char, i) => <div key={i} className={"c-character__top-info"}>
                 <img className={"c-character__image"} src={char.image} alt={char.name}/>
                 <h2>{char.name}</h2>
             </div>)}
             </div>
-
+            </SimpleBar>
 
             
             <Footer
