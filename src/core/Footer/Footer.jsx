@@ -17,12 +17,12 @@ export function Footer(props) {
   return(
     showFooter && <div className="Footer">
       <nav className="Footer__inner">
-        <NavLink activeClassName="Footer__link--active" to="/characters">
+        <NavLink onClick={() => props.fnChangeSearchText("")} activeClassName="Footer__link--active" to="/characters" >
           <p className="Footer__linkText">
             {props.t("characters")}
           </p>
         </NavLink>
-        <NavLink activeClassName="Footer__link--active" to="/houses">
+        <NavLink onClick={() => props.fnChangeSearchText("")} activeClassName="Footer__link--active" to="/houses" >
           <p className="Footer__linkText">
             {props.t("houses")}
           </p>

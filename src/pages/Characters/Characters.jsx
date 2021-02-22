@@ -1,33 +1,38 @@
-import React, {useState, useEffect} from "react";
-import './_Characters.scss';
-import {Footer} from "../../core/Footer/Footer";
-import {Header} from "../../core/Header/Header";
+import React, {useState, useEffect, useContext} from "react";
+import {Link} from "react-router-dom";
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
-import {Link,useParams} from "react-router-dom";
+
+import './_Characters.scss';
 import {API} from '../../shared/const/api.const';
-import { CharacterDetail } from "../CharacterDetail/CharacterDetail";
+import {SearchContext} from "../../shared/contexts/SearchContext";
 
 
 export function Characters(props) {
-    const {characterName} = useParams();
-    const [character, setCharacter] = useState([]);
-    const getCharacter = () => {
+    const [characters, setCharacters] = useState([]);
+    const getCharacters = () => {
         API.get('show/characters/').then((res) => {
-            setCharacter(res.data);
+            setCharacters(res.data);
         });
     }
-    useEffect(getCharacter, []);
+    useEffect(getCharacters, []);
+
+    const searchText = useContext(SearchContext);
 
     return (
         <div className="hero">
             <SimpleBar autoHide={false}>
-            <div className="char">
-            {character.map((char, i) => <div key={i} className={"char_img"}>
-            <Link to={`/characters/${char.name}`}><img className={"char_img"} src={char.image} alt={char.name}/>
-                <figcaption><h4>{char.name}</h4></figcaption> </Link>
-            </div>)}
-            </div>
+                <div className="char">
+                    {characters
+                        .filter(char => char.name.toLowerCase().includes(searchText))
+                        .map((char, i) => 
+                    <div key={i} className={"char_img"}>
+                        <Link to={`/characters/${char.name}`}>
+                            <img className={"char_img"} src={char.image} alt={char.name}/>
+                            <figcaption><h4>{char.name}</h4></figcaption>
+                        </Link>
+                    </div>)}
+                </div>
             </SimpleBar>
         </div>
     )
