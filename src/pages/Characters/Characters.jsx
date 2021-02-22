@@ -24,7 +24,7 @@ export function Characters(props) {
             <SimpleBar autoHide={false}>
             <div className="char">
             {character.map((char, i) => <div key={i} className={"char_img"}>
-            <Link to={"/characters/:characterName"}><img className={"char_img"} src={char.image} alt={char.name}/>
+            <Link to={`/characters/${char.name}`}><img className={"char_img"} src={char.image} alt={char.name}/>
                 <figcaption><h4>{char.name}</h4></figcaption> </Link>
             </div>)}
             </div>
