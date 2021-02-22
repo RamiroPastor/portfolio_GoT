@@ -29,7 +29,8 @@ export function Characters(props) {
         <div className="hero hero--char">
             <SimpleBar autoHide={false}>
             <div className="hero__container">
-                {characters.map((char, i) => 
+                {characters.filter(char => char.name.toLowerCase().includes(searchText))
+                .map((char, i) => 
                 <figure key={i} className={"hero__card"}>
                     <Link to={`/characters/${char.name}`}>
                         <img className="hero__card__img" src={char.image ? char.image : "https://i.imgur.com/p8G3kF0.png"} alt={char.name}/>

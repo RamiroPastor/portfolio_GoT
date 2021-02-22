@@ -33,7 +33,8 @@ export function Houses(props) {
     <div className="hero hero--house">
       <SimpleBar autoHide={false}>
       <div className="hero__container hero__container--houses">
-      {houses.map((hom, i) => <div key={i} className="hero__card">
+      {houses.filter(hom => hom.name.toLowerCase().includes(searchText))
+      .map((hom, i) => <div key={i} className="hero__card">
       <Link to={`/houses/${hom.name}`}>
                 <figure className="hero__figure">
                   <img className="hero__figure__image" src={hom.logoURL ? hom.logoURL : "https://i.imgur.com/XzOn90r.png"} alt={hom.name}/>
