@@ -28,35 +28,35 @@ export function HouseDetail(props) {
                     <h1>{house.name}</h1>
                 </div>
                 <div className={"c-house-detail__bottom-info"}>
-                    <div className={"c-house-detail__info"}>
+                    {house.words && <div className={"c-house-detail__info"}>
                         <h2>{props.t("words")}</h2>
                         <p>{house.words}</p>
-                    </div>
+                    </div>}
 
-                    <div className={"c-house-detail__info"}>
+                    {house.seat && <div className={"c-house-detail__info"}>
                         <h2>{props.t("seat")}</h2>
                         {house.seat.map((place, i) => <p key={i}>{place}</p>)}
-                    </div>
+                    </div>}
 
-                    <div className={"c-house-detail__info"}>
+                    {house.region && <div className={"c-house-detail__info"}>
                         <h2>{props.t("region")}</h2>
                         {house.region.map((place, i) => <p key={i}>{place}</p>)}
-                    </div>
+                    </div>}
 
-                    <div className={"c-house-detail__info"}>
+                    {house.allegiance && <div className={"c-house-detail__info"}>
                         <h2>{props.t("allegiances")}</h2>
                         {house.allegiance.map((allegiance, i) => <p key={i}>{allegiance}</p>)}
-                    </div>
+                    </div>}
 
-                    <div className={"c-house-detail__info"}>
+                    {house.religion && <div className={"c-house-detail__info"}>
                         <h2>{props.t("religion")}</h2>
                         {house.religion.map((cult, i) => <p key={i}>{cult}</p>)}
-                    </div>
+                    </div>}
 
-                    <div className={"c-house-detail__info"}>
+                    {house.created && <div className={"c-house-detail__info"}>
                         <h2>{props.t("created")}</h2>
                         <p>{house.createdAt.slice(0, 10)}</p>
-                    </div>
+                    </div>}
                 </div>
             </div>}
         </div>
