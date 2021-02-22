@@ -1,23 +1,23 @@
-import React, {useState, useEffect} from "react";
-import './_Characters.scss';
-import {Footer} from "../../core/Footer/Footer";
-import {Header} from "../../core/Header/Header";
+import React, {useState, useEffect, useContext} from "react";
+import {Link} from "react-router-dom";
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
-import {Link,useParams} from "react-router-dom";
+
+import './_Characters.scss';
 import {API} from '../../shared/const/api.const';
-import { CharacterDetail } from "../CharacterDetail/CharacterDetail";
+import {SearchContext} from "../../shared/contexts/SearchContext";
 
 
 export function Characters(props) {
-    const {characterName} = useParams();
-    const [character, setCharacter] = useState([]);
-    const getCharacter = () => {
+    const [characters, setCharacters] = useState([]);
+    const getCharacters = () => {
         API.get('show/characters/').then((res) => {
-            setCharacter(res.data);
+            setCharacters(res.data);
         });
     }
-    useEffect(getCharacter, []);
+    useEffect(getCharacters, []);
+
+    const searchText = useContext(SearchContext);
 
     return (
         <div className="hero hero--char">

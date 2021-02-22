@@ -53,6 +53,7 @@ export function Header(props) {
         {showSearchBar &&
         <SearchBar
           t={props.t}
+          fnChangeSearchText={props.fnChangeSearchText}
         ></SearchBar>}
 
         {!showGoBackButton && !showSearchBar &&
