@@ -1,18 +1,22 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import './_Chronology.scss';
 import { Footer } from "../../core/Footer/Footer";
 import { Header } from "../../core/Header/Header";
 import {API} from "../../shared/const/api.const";
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
+import { LoaderContext } from "../../core/Loader/LoaderContext/LoaderContext";
 
 export function Chronology(props) {
   
   const [ characters, setCharacters ] = useState(null);
   const [ sort, setSort ] = useState(true);
 
+  const { setIsLoading } = useContext(LoaderContext);
+
   const getCharacters = () => {
+    setIsLoading(true);
     API.get('show/characters')
     .then(res => {
       const allCharacters = res.data;
@@ -30,10 +34,11 @@ export function Chronology(props) {
         }
       }
       setCharacters(characters);
+      setIsLoading(false);
     })
     .catch(error => console.log(error));
   }
-
+  
   const sortByAge = (propList) => {
     // Check if api result exist to avoid "element is not iterable"
     if (propList) {

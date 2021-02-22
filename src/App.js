@@ -10,6 +10,8 @@ import {Header} from "./core/Header/Header";
 import {Footer} from "./core/Footer/Footer";
 
 import { SearchContext } from "./shared/contexts/SearchContext";
+import { LoaderContext } from "./core/Loader/LoaderContext/LoaderContext";
+import Loader from "./core/Loader/Loader";
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
 
     const [searchText, setSearchText] = useState("");
 
+    const [ isLoading, setIsLoading ] = useState(false);
+
     const changeSearchText = newText => {
         const txt = newText.toLowerCase()
         setSearchText(txt)
@@ -34,7 +38,10 @@ function App() {
                 <div className="App">
                     <MusicGoT/>
                     <Header fnSetLang={changeLanguage} t={t} fnChangeSearchText={changeSearchText}/>
-                    <Routes t={t}/>
+                    <LoaderContext.Provider value={{ isLoading, setIsLoading }}>
+                        <Loader />
+                        <Routes t={t}/>
+                    </LoaderContext.Provider>
                     <Footer t={t} fnChangeSearchText={changeSearchText}/>
                 </div>
             </SearchContext.Provider>

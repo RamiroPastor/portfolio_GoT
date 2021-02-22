@@ -6,13 +6,19 @@ import 'simplebar/dist/simplebar.min.css';
 import './_Characters.scss';
 import {API} from '../../shared/const/api.const';
 import {SearchContext} from "../../shared/contexts/SearchContext";
+import { LoaderContext } from "../../core/Loader/LoaderContext/LoaderContext";
 
 
 export function Characters(props) {
     const [characters, setCharacters] = useState([]);
+
+    const { setIsLoading } = useContext(LoaderContext);
+
     const getCharacters = () => {
+        setIsLoading(true);
         API.get('show/characters/').then((res) => {
             setCharacters(res.data);
+            setIsLoading(false);
         });
     }
     useEffect(getCharacters, []);

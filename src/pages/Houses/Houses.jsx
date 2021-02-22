@@ -7,6 +7,7 @@ import 'simplebar/dist/simplebar.min.css';
 import './_Houses.scss';
 import {API} from '../../shared/const/api.const';
 import {SearchContext} from "../../shared/contexts/SearchContext";
+import { LoaderContext } from "../../core/Loader/LoaderContext/LoaderContext";
 
 
 
@@ -14,10 +15,14 @@ export function Houses(props) {
 
     const [houses, setHouses] = useState([]);
 
+    const { setIsLoading } = useContext(LoaderContext);
+
     const getHouses = () => {
+      setIsLoading(true);
         API.get('show/houses/').then((res) => {
             setHouses(res.data);
         });
+        setIsLoading(false);
     }
 
     useEffect(getHouses, []);
