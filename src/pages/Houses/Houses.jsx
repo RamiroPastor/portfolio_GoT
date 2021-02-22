@@ -33,7 +33,7 @@ export function Houses(props) {
       <div className="home">
       {house.map((hom, i) => <div key={i} className={"home_text"}>
       <Link to={"/houses/:houseName"}><img className={"image"} src={hom.logoURL} alt={hom.name}/>
-                <h2 className="home_text">{hom.name}</h2></Link>
+                <h2 className={"home_text"}>{hom.name}</h2></Link>
             </div>)}
             </div>
           
