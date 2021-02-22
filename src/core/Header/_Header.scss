@@ -1,5 +1,5 @@
-@import '/src/base/variables';
-@import '/src/base/responsive';
+@import "/src/base/variables";
+@import "/src/base/responsive";
 
 .Header {
   position: fixed;
@@ -31,6 +31,7 @@
   img {
     margin-right: 1.6rem;
     height: 4vh;
+    width: 4vh;
   }
   span {
     font-size: 3vh;
