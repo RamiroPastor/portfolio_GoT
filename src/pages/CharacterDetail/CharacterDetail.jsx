@@ -33,13 +33,13 @@ export function CharacterDetail(props) {
         <div className="hero">
             {character.id && house[0] && <div className={"c-char-detail"}>
                 <div className={"c-char-detail__top-info"}>
-                    <img className={"c-char-detail__image"} src={character.image} alt={character.name}/>
+                    <img className={"c-char-detail__image"} src={character.image ? character.image : "https://i.imgur.com/p8G3kF0.png"} alt={character.name}/>
                     <h1>{character.name}</h1>
                 </div>
                 <div className={"c-char-detail__bottom-info"}>
                     <div className={"c-char-detail__info"}>
                         <h2>{props.t("house")}</h2>
-                        <Link to={"/houses/"+character.house}><img className={"c-char-detail__house-image"} src={house[0].logoURL} alt={""}/></Link>
+                        <Link to={"/houses/"+character.house}><img className={"c-char-detail__house-image"} src={house[0].logoURL ? house[0].logoURL : "https://i.imgur.com/XzOn90r.png"} alt={""}/></Link>
                     </div>
 
                     <div className={"c-char-detail__info"}>
