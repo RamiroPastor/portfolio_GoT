@@ -21,14 +21,6 @@ export function Characters(props) {
 
     return (
         <div className="hero">
-            <Header
-                showGoBackButton={false}
-                showSearchBar={true}
-                showGoHomeButton={true}
-                t={props.t}
-                fnSetLang={props.fnSetLang}
-            />
-        
             <SimpleBar autoHide={false}>
             <div className="char">
             {character.map((char, i) => <div key={i} className={"char_img"}>
@@ -37,10 +29,6 @@ export function Characters(props) {
             </div>)}
             </div>
             </SimpleBar>
-          
-            <Footer
-                t={props.t}
-            />
         </div>
     )
 }
