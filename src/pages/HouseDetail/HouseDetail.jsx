@@ -24,7 +24,7 @@ export function HouseDetail(props) {
         <div className="hero">
             {house._id && <div className={"c-house-detail"}>
                 <div className={"c-house-detail__top-info"}>
-                    <img className={"c-house-detail__image"} src={house.logoURL} alt={house.name}/>
+                    <img className={"c-house-detail__image"} src={house.logoURL ? house.logoURL : "https://i.imgur.com/XzOn90r.png"} alt={house.name}/>
                     <h1>{house.name}</h1>
                 </div>
                 <div className={"c-house-detail__bottom-info"}>
