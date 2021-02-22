@@ -1,0 +1,62 @@
+.hero {
+    &--char, &--house {
+        padding: 1rem;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+        grid-template-rows: repeat(8, 320px);
+        grid-gap: 20px;
+        justify-items: center;
+        &--houses {
+            grid-template-rows: repeat(8, minmax(320px, 1fr));
+        }
+    }
+    &__card {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        &__img {
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 0;
+            max-height: 100%;
+        }
+        &__name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            font-family: 'GOT';
+            font-size: 14px;
+            text-align: center;
+            height: 56px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.363);
+            bottom: 0;
+            opacity: 0;
+        }
+        
+        &:hover {
+            .hero__card__name {
+                opacity: 1;
+            }
+        }
+    }
+    &__figure {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-self: space-between;
+        flex-direction: column;
+        &__image {
+            max-height: 10%;
+            width: 100%;
+        }
+        &__text {
+            font-family: 'GOT';
+            font-size: 14px;
+            margin-top: 28px;
+        }
+    }
+}

@@ -20,13 +20,16 @@ export function Characters(props) {
     useEffect(getCharacter, []);
 
     return (
-        <div className="hero">
+        <div className="hero hero--char">
             <SimpleBar autoHide={false}>
-            <div className="char">
-            {character.map((char, i) => <div key={i} className={"char_img"}>
-            <Link to={`/characters/${char.name}`}><img className={"char_img"} src={char.image ? char.image : "https://i.imgur.com/p8G3kF0.png"} alt={char.name}/>
-                <figcaption><h4>{char.name}</h4></figcaption> </Link>
-            </div>)}
+            <div className="hero__container">
+                {character.map((char, i) => 
+                <figure key={i} className={"hero__card"}>
+                    <Link to={`/characters/${char.name}`}>
+                        <img className="hero__card__img" src={char.image ? char.image : "https://i.imgur.com/p8G3kF0.png"} alt={char.name}/>
+                        <figcaption className="hero__card__name">{char.name}</figcaption>
+                    </Link>
+                </figure>)}
             </div>
             </SimpleBar>
         </div>

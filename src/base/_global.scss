@@ -24,3 +24,43 @@ a {
   margin-top: $headerH;
   background-color: black;
 }
+
+[data-simplebar] {
+  margin: 0 3px 0 3px;
+  max-width: 1600px;
+  margin: 0 auto;
+  .simplebar {
+    &-scrollbar {
+      &::before {
+        background-color: white;
+        left: 0;
+        right: 0;
+      }
+      
+      &.simplebar-visible {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+    
+    &-track {
+      &.simplebar-vertical {
+        width: 4px;
+        background-color: gray;
+        border-radius: 20px;
+        
+        .simplebar-scrollbar {
+          &:before {
+            top: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    
+    &-wrapper {
+      max-height: 200px;
+    }
+  }
+}

@@ -21,12 +21,15 @@ export function Houses(props) {
     useEffect(getHouse, []);
 
   return(
-    <div className="hero">
+    <div className="hero hero--house">
       <SimpleBar autoHide={false}>
-      <div className="home">
-      {house.map((hom, i) => <div key={i} className={"home_text"}>
-      <Link to={`/houses/${hom.name}`}><img className={"image"} src={hom.logoURL ? hom.logoURL : "https://i.imgur.com/XzOn90r.png"} alt={hom.name}/>
-                <h2 className={"home_text"}>{hom.name}</h2></Link>
+      <div className="hero__container hero__container--houses">
+      {house.map((hom, i) => <div key={i} className="hero__card">
+      <Link to={`/houses/${hom.name}`}>
+                <figure className="hero__figure">
+                  <img className="hero__figure__image" src={hom.logoURL ? hom.logoURL : "https://i.imgur.com/XzOn90r.png"} alt={hom.name}/>
+                  <figcaption className="hero__figure__text">{hom.name}</figcaption>
+                </figure></Link>
             </div>)}
             </div>
 
