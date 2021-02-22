@@ -1,5 +1,5 @@
-@import '/src/base/variables';
-@import '/src/base/responsive';
+@import "/src/base/variables";
+@import "/src/base/responsive";
 
 .Home {
   display: flex;
@@ -13,6 +13,7 @@
   h1 {
     font-family: "GoT", sans-serif;
     font-size: 3rem;
+    font-weight: normal;
     cursor: default;
     @include landscape {
       font-size: 5rem;
