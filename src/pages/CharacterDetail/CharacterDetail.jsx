@@ -37,43 +37,43 @@ export function CharacterDetail(props) {
                     <h1>{character.name}</h1>
                 </div>
                 <div className={"c-char-detail__bottom-info"}>
-                    <div className={"c-char-detail__info"}>
+                    {character.house && <div className={"c-char-detail__info"}>
                         <h2>{props.t("house")}</h2>
                         <Link to={"/houses/"+character.house}><img className={"c-char-detail__house-image"} src={house[0].logoURL ? house[0].logoURL : "https://i.imgur.com/XzOn90r.png"} alt={""}/></Link>
-                    </div>
+                    </div>}
 
-                    <div className={"c-char-detail__info"}>
+                    {character.allegiances && <div className={"c-char-detail__info"}>
                         <h2>{props.t("allegiances")}</h2>
                         <SimpleBar autoHide={false}>
                             {character.allegiances.map((allegiance, i) => <p key={i}>{allegiance}</p>)}
                         </SimpleBar>
-                    </div>
+                    </div>}
 
-                    <div className={"c-char-detail__info"}>
+                    {character.appearances && <div className={"c-char-detail__info"}>
                         <h2>{props.t("appearances")}</h2>
                         <SimpleBar autoHide={false}>
                             {character.appearances.map((appearance, i) => <p key={i}>{appearance}</p>)}
                         </SimpleBar>
-                    </div>
+                    </div>}
 
-                    <div className={"c-char-detail__info"}>
+                    {character.father && <div className={"c-char-detail__info"}>
                         <h2>{props.t("father")}</h2>
                         <p>{character.father}</p>
-                    </div>
+                    </div>}
 
-                    <div className={"c-char-detail__info"}>
+                    {character.siblings && <div className={"c-char-detail__info"}>
                         <h2>{props.t("siblings")}</h2>
                         <SimpleBar autoHide={false}>
                             {character.siblings.map((sibling, i) => <p key={i}>{sibling}</p>)}
                         </SimpleBar>
-                    </div>
+                    </div>}
 
-                    <div className={"c-char-detail__info"}>
+                    {character.titles && <div className={"c-char-detail__info"}>
                         <h2>{props.t("titles")}</h2>
                         <SimpleBar autoHide={false}>
                             {character.titles.map((title, i) => <p key={i}>{title}</p>)}
                         </SimpleBar>
-                    </div>
+                    </div>}
                 </div>
             </div>}
         </div>
