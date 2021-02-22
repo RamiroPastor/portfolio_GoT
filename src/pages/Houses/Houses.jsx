@@ -2,7 +2,9 @@ import React, {useState, useEffect} from "react";
 import './_Houses.scss';
 import { Footer } from "../../core/Footer/Footer";
 import { Header } from "../../core/Header/Header";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
 import {API} from '../../shared/const/api.const';
 
 export function Houses(props) {
@@ -27,12 +29,15 @@ export function Houses(props) {
         t={props.t}
         fnSetLang={props.fnSetLang}
       />
-      
-      {house.map((house, i) => <div key={i} className={"c-character__top-info"}>
-                <img className={"c-character__image"} src={house.logoURL} alt={house.name}/>
-                <h2>{house.name}</h2>
+      <SimpleBar autoHide={false}>
+      <div className="home">
+      {house.map((hom, i) => <div key={i} className={"home_text"}>
+      <Link to={"/houses/:houseName"}><img className={"image"} src={hom.logoURL} alt={hom.name}/>
+                <h2 className="home_text">{hom.name}</h2></Link>
             </div>)}
-
+            </div>
+          
+            </SimpleBar>
       <Footer
         t={props.t}
       ></Footer>

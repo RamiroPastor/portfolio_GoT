@@ -1,9 +1,14 @@
 
 import React from "react";
+
 import './_SearchBar.scss';
 
 
+
+
 export function SearchBar(props) {
+
+  
   
   return(
     <label className="SearchBar">
@@ -16,7 +21,7 @@ export function SearchBar(props) {
         className="SeachBar__input"
         type="seach"
         placeholder={props.t("search") + "..."}
-      />
+             />
     </label>
   )
 }

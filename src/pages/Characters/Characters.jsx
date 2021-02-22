@@ -4,8 +4,9 @@ import {Footer} from "../../core/Footer/Footer";
 import {Header} from "../../core/Header/Header";
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
-import {useParams} from "react-router-dom";
+import {Link,useParams} from "react-router-dom";
 import {API} from '../../shared/const/api.const';
+import { CharacterDetail } from "../CharacterDetail/CharacterDetail";
 
 
 export function Characters(props) {
@@ -17,6 +18,7 @@ export function Characters(props) {
         });
     }
     useEffect(getCharacter, []);
+
     return (
         <div className="hero">
             <Header
@@ -26,22 +28,16 @@ export function Characters(props) {
                 t={props.t}
                 fnSetLang={props.fnSetLang}
             />
-        <section className="section">
+        
             <SimpleBar autoHide={false}>
-            <div className="c-character">
-            {character.map((char, i) => <div key={i} className={"c-character__top-info"}>
-            <figure className="figure">
-                <img className={"c-character__image"} src={char.image} alt={char.name}/>
-                <figcaption>
-                <h2>{char.name}</h2>
-                </figcaption>
-                </figure>
+            <div className="char">
+            {character.map((char, i) => <div key={i} className={"char_img"}>
+            <Link to={"/characters/:characterName"}><img className={"char_img"} src={char.image} alt={char.name}/>
+                <figcaption><h4>{char.name}</h4></figcaption> </Link>
             </div>)}
             </div>
             </SimpleBar>
-            </section>
-
-    
+          
             <Footer
                 t={props.t}
             />
@@ -49,3 +45,4 @@ export function Characters(props) {
     )
 }
   
+
