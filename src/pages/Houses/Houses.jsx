@@ -22,13 +22,6 @@ export function Houses(props) {
 
   return(
     <div className="hero">
-      <Header
-        showGoBackButton={false}
-        showSearchBar={true}
-        showGoHomeButton={true}
-        t={props.t}
-        fnSetLang={props.fnSetLang}
-      />
       <SimpleBar autoHide={false}>
       <div className="home">
       {house.map((hom, i) => <div key={i} className={"home_text"}>
@@ -38,9 +31,6 @@ export function Houses(props) {
             </div>
           
             </SimpleBar>
-      <Footer
-        t={props.t}
-      ></Footer>
     </div>
   )
 }
