@@ -1,8 +1,6 @@
 
 import React, { useContext, useEffect, useState } from "react";
 import './_Chronology.scss';
-import { Footer } from "../../core/Footer/Footer";
-import { Header } from "../../core/Header/Header";
 import {API} from "../../shared/const/api.const";
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
