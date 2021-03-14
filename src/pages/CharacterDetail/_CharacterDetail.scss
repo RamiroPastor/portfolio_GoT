@@ -5,10 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
   text-align: center;
   max-width: 100%;
-  overflow-x: hidden;
 
   img {
     max-width: 100%;
@@ -20,16 +18,26 @@
 
   h1, h2 {
     font-family: "GoT", sans-serif;
-    padding-bottom: 2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
   }
 
   &__image {
-    max-height: 300px;
+    max-height: 36vh;
     padding-bottom: 2rem;
   }
 
   &__house-image {
-    max-height: 200px;
+    $x: 20vmin;
+    max-height: $x;
+    max-width: $x;
   }
 
   &__top-info {
@@ -43,7 +51,8 @@
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 5rem;
+    width: 100%;
+    padding-bottom: 3rem;
 
     @include landscape {
       flex-direction: row;
@@ -51,15 +60,16 @@
   }
 
   &__info {
-    padding-top: 10rem;
+    padding-top: 8vh;
     @include landscape {
-      width: 50vw;
+      width: 50%;
+      max-height: 28vh;
     }
     @include tablet {
-      width: 33vw;
+      width: 33%;
     }
     @include desktop {
-      width: 16vw;
+      width: 16%;
     }
   }
 }

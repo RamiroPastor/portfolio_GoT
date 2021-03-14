@@ -30,6 +30,7 @@ export function CharacterDetail(props) {
 
 
     return (
+        <div className="hero__outer hero__outer--no-footer">
         <div className="hero">
             {character.id && house[0] && <div className={"c-char-detail"}>
                 <div className={"c-char-detail__top-info"}>
@@ -76,6 +77,7 @@ export function CharacterDetail(props) {
                     </div>}
                 </div>
             </div>}
+        </div>
         </div>
     )
 }

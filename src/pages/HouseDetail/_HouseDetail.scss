@@ -39,7 +39,8 @@
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 5rem;
+    width: 100%;
+    padding-bottom: 3rem;
 
     @include landscape {
       flex-direction: row;
@@ -47,15 +48,16 @@
   }
 
   &__info {
-    padding-top: 10rem;
+    padding-top: 8vh;
     @include landscape {
-      width: 50vw;
+      width: 50%;
+      max-height: 28vh;
     }
     @include tablet {
-      width: 33vw;
+      width: 33%;
     }
     @include desktop {
-      width: 16vw;
+      width: 16%;
     }
   }
 }

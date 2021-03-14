@@ -19,10 +19,20 @@ a {
   color: white;
 }
 
+h1, h2 {
+  font-weight: normal;
+}
+
 
 .hero__outer {
   height: 100vh - $headerH - $footerH;
   margin-top: $headerH;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.hero__outer--no-footer {
+  height: 100vh - $headerH;
 }
 
 .hero {
@@ -66,8 +76,12 @@ a {
       }
     }
     
+    &-content {
+      margin: 0;
+    }
+    
     &-wrapper {
-      height: 100vh - $headerH - $footerH
+      max-height: 100vh - $headerH - $footerH
     }
   }
 }

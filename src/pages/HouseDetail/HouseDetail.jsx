@@ -21,6 +21,7 @@ export function HouseDetail(props) {
     useEffect(getHouse, [houseName]);
 
     return (
+        <div className="hero__outer hero__outer--no-footer">
         <div className="hero">
             {house._id && <div className={"c-house-detail"}>
                 <div className={"c-house-detail__top-info"}>
@@ -59,6 +60,7 @@ export function HouseDetail(props) {
                     </div>}
                 </div>
             </div>}
+        </div>
         </div>
     )
 }
