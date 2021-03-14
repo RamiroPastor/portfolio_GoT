@@ -19,10 +19,17 @@ a {
   color: white;
 }
 
-.hero {
+
+.hero__outer {
   height: 100vh - $headerH - $footerH;
   margin-top: $headerH;
-  background-color: black;
+}
+
+.hero {
+  max-width: $maxW;
+  padding: 0 $padH;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 [data-simplebar] {
@@ -60,7 +67,7 @@ a {
     }
     
     &-wrapper {
-      max-height: 200px;
+      height: 100vh - $headerH - $footerH
     }
   }
 }

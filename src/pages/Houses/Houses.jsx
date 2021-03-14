@@ -30,6 +30,7 @@ export function Houses(props) {
     const searchText = useContext(SearchContext);
 
   return(
+    <div className="hero__outer">
     <div className="hero hero--house">
       <SimpleBar autoHide={false}>
       <div className="hero__container hero__container--houses">
@@ -44,6 +45,7 @@ export function Houses(props) {
             </div>
 
             </SimpleBar>
+    </div>
     </div>
   )
 }

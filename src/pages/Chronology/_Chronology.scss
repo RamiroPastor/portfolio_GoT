@@ -7,7 +7,7 @@
 .sorter {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
   cursor: pointer;
   z-index: 99999;
   &__svg {
@@ -53,7 +53,7 @@
     border: 1px solid white;
     background-color: white;
     width: 1px;
-    top: 0;
+    top: 12px;
     left: 50%;
     transform: translateX(-50%);
   }

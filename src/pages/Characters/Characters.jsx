@@ -26,6 +26,7 @@ export function Characters(props) {
     const searchText = useContext(SearchContext);
 
     return (
+        <div className="hero__outer">
         <div className="hero hero--char">
             <SimpleBar autoHide={false}>
             <div className="hero__container">
@@ -39,6 +40,7 @@ export function Characters(props) {
                 </figure>)}
             </div>
             </SimpleBar>
+        </div>
         </div>
     )
 }
